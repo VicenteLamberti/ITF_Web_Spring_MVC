@@ -31,7 +31,7 @@ public class Lancamento {
 	private String descricao;
 	private Double valor;
 	private Date dataVencimento;
-	private boolean pago;
+	private Boolean pago;
 	private Date dataPagamento;
 	
 	
@@ -55,11 +55,11 @@ public class Lancamento {
 
 
 
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 	
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 	
@@ -99,10 +99,10 @@ public class Lancamento {
 	public void setDataVencimento(Date dataVencimento) {
 		this.dataVencimento = dataVencimento;
 	}
-	public boolean isPago() {
+	public Boolean isPago() {
 		return pago;
 	}
-	public void setPago(boolean pago) {
+	public void setPago(Boolean pago) {
 		this.pago = pago;
 	}
 	
