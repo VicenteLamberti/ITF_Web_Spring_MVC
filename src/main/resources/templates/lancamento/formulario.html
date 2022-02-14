@@ -6,36 +6,42 @@
 <body>
 	<div>
 		<h1>Cadastro Novo Lançamento Receita/Despesas</h1>
-		<button class="btn btn-primary">Novo lançamento</button>
-		<button class="btn btn-primary">Consulta lançamentos</button>
+		<button class="btn btn-primary">Novo Lançamento</button>
+		<button class="btn btn-primary">Consultar Lançamentos</button>
+		
 		<form>
 			<div class="form-group">
-				<label>Tipo do Lancamento</label> <input  type="radio" />
+				<label>Tipo do Lancamento:</label>
+				 <input  th:each="tipoLancamento : ${tiposLancamentos}" th:name="tipo" th:value="${tipoLancamento.descricao}" th:text="${tipoLancamento.descricao}" type="radio"/>
 			</div>
+			
 			<div class="form-group">
-				<label>Empresa</label> 
-				<select class="form-control">
-					<option>Selecione</option>
+				<label>Empresa:</label> 
+				<select name="empresas" class="form-control">
+					<option th:each="empresa : ${empresas}"
+							th:value="${empresa.codigo}"
+							th:text="${empresa.nome}">
+					</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<label>Descrição Nota Fiscal</label> <input class="form-control" type="text" />
+				<label>Descrição Nota Fiscal:</label> <input class="form-control" type="text" />
 			</div>
 			<div class="form-group">
-				<label>Valor</label> <input class="form-control" type="text" />
+				<label>Valor:</label> <input class="form-control" type="number" />
 			</div>
 			<div class="form-group">
-				<label>Data Vencimento</label> <input class="form-control" type="text" />
+				<label>Data Vencimento:</label> <input class="form-control" type="date" />
 			</div>
 			<div class="form-group">
-				<label>Conta Paga</label> <input  type="checkbox" />
+				<label>Conta Paga:</label> <input  type="checkbox" />
 			</div>
 			<div class="form-group">
-				<label>Data Pagamento</label> <input class="form-control"type="date" />
+				<label>Data Pagamento:</label> <input class="form-control"type="date" />
 			</div>
 
 
-
+			<button class="btn btn-success" type="submit">Cadastrar Lançamento</button>
 
 
 

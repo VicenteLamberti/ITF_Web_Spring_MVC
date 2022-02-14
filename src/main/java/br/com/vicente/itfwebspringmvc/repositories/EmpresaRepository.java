@@ -7,5 +7,4 @@ import br.com.vicente.itfwebspringmvc.model.Empresa;
 
 @Repository
 public interface EmpresaRepository extends JpaRepository<Empresa, Integer> {
-
 }
