@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.vicente.itfwebspringmvc.form.FormLancamento;
 import br.com.vicente.itfwebspringmvc.model.Empresa;
@@ -20,7 +21,7 @@ import br.com.vicente.itfwebspringmvc.model.TipoLancamento;
 import br.com.vicente.itfwebspringmvc.services.EmpresaService;
 import br.com.vicente.itfwebspringmvc.services.LancamentoService;
 
-
+@RequestMapping("/lancamento")
 @Controller
 public class LancamentoController {
 	
@@ -30,7 +31,7 @@ public class LancamentoController {
 	@Autowired
 	EmpresaService empresaService;
 
-	@GetMapping("/lancamento/cadastrar")
+	@GetMapping("/cadastrar")
 	public String cadastrar(Model model, FormLancamento formLancamento) {
 		List<Empresa> empresas = empresaService.buscarEmpresas();
 		TipoLancamento[] tiposLancamentos = TipoLancamento.values();
