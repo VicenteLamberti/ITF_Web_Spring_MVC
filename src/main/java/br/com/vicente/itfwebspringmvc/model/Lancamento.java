@@ -42,7 +42,7 @@ public class Lancamento {
 	
 
 	public Lancamento(Integer codigo, TipoLancamento tipo, Empresa empresa, String descricao, Double valor,
-			Date dataVencimento, Boolean pago, Date dataPagamento) {
+			Date dataVencimento, Boolean pago,  Date dataPagamento) {
 	
 		this.tipo = tipo;
 		this.empresa = empresa;
@@ -99,6 +99,7 @@ public class Lancamento {
 	public void setDataVencimento(Date dataVencimento) {
 		this.dataVencimento = dataVencimento;
 	}
+	
 	public Boolean isPago() {
 		return pago;
 	}
@@ -139,6 +140,8 @@ public class Lancamento {
 				+ ", valor=" + valor + ", dataVencimento=" + dataVencimento + ", pago=" + pago + ", dataPagamento="
 				+ dataPagamento + "]";
 	}
+	
+	
 	
 	
 	

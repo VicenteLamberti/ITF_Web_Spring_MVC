@@ -11,7 +11,7 @@ public class FormLancamento {
 	@Autowired
 	private EmpresaService empresaService;
 	
-//	private String tipoLancamento;
+	private String tipoLancamento;
 	private Integer empresa;
 	private String descricao;
 	private String valor;
@@ -22,19 +22,19 @@ public class FormLancamento {
 	
 	
 
-//	public String getTipoLancamento() {
-//		return tipoLancamento;
-//	}
-//
-//
-//
-//
-//	public void setTipoLancamento(String tipoLancamento) {
-//		this.tipoLancamento = tipoLancamento;
-//	}
-//
-//
-//
+	public String getTipoLancamento() {
+		return tipoLancamento;
+	}
+
+
+
+
+	public void setTipoLancamento(String tipoLancamento) {
+		this.tipoLancamento = tipoLancamento;
+	}
+
+
+
 
 	public Integer getEmpresa() {
 		return empresa;

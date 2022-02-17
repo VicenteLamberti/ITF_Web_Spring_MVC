@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import br.com.vicente.itfwebspringmvc.form.FormLancamento;
 import br.com.vicente.itfwebspringmvc.model.Empresa;
 import br.com.vicente.itfwebspringmvc.model.Lancamento;
+import br.com.vicente.itfwebspringmvc.model.TipoLancamento;
 import br.com.vicente.itfwebspringmvc.repositories.LancamentoRepository;
 
 @Service
@@ -50,6 +51,10 @@ public class LancamentoService {
 		
 		Date datePagamento = new SimpleDateFormat("yyyy-MM-dd").parse(formLancamento.getDataPagamento());
 		lancamento.setDataPagamento(datePagamento);
+		
+		lancamento.setPago(formLancamento.getContaPaga());
+		
+//		lancamento.setTipo(TipoLancamento.valueOf(formLancamento.getTipoLancamento()));
 		
 		
 		return lancamento;
