@@ -2,8 +2,6 @@ package br.com.vicente.itfwebspringmvc.form;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.vicente.itfwebspringmvc.model.Empresa;
-import br.com.vicente.itfwebspringmvc.model.Lancamento;
 import br.com.vicente.itfwebspringmvc.services.EmpresaService;
 
 public class FormLancamento {
@@ -18,29 +16,19 @@ public class FormLancamento {
 	private String dataVencimento;
 	private Boolean contaPaga;
 	private String dataPagamento;
-	
-	
-	
 
 	public String getTipoLancamento() {
 		return tipoLancamento;
 	}
-
-
-
 
 	public void setTipoLancamento(String tipoLancamento) {
 		this.tipoLancamento = tipoLancamento;
 	}
 
 
-
-
 	public Integer getEmpresa() {
 		return empresa;
 	}
-
-
 
 
 	public void setEmpresa(Integer empresa) {

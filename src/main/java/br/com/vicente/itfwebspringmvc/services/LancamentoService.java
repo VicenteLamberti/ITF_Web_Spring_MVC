@@ -53,8 +53,9 @@ public class LancamentoService {
 		lancamento.setDataPagamento(datePagamento);
 		
 		lancamento.setPago(formLancamento.getContaPaga());
-		
-//		lancamento.setTipo(TipoLancamento.valueOf(formLancamento.getTipoLancamento()));
+
+		System.out.println(TipoLancamento.valueOf(formLancamento.getTipoLancamento()));
+		lancamento.setTipo(TipoLancamento.valueOf(formLancamento.getTipoLancamento()));
 		
 		
 		return lancamento;
